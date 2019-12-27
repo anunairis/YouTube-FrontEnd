@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+nav {
+  width: 100%;
+  height: 4rem;
+  background-color: #c90c0c;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem; }
+  nav .topnav {
+    overflow: hidden;
+    position: relative; }
+    nav .topnav #myLinks {
+      display: none; }
+    nav .topnav a {
+      padding: 1.5rem 2rem;
+      text-decoration: none;
+      display: block; }
+    nav .topnav .icon {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: -12px; }
+      nav .topnav .icon .hamburger {
+        font-size: 1.8rem;
+        color: white; }
+  nav .logo {
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none; }
+    nav .logo a {
+      text-decoration: none; }
+      nav .logo a:visited {
+        color: white;
+        text-decoration: none; }
+    nav .logo:visited {
+      color: white;
+      text-decoration: none; }
+  nav .searchbar_input {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    flex: 1;
+    flex-shrink: 2;
+    margin: 0 3rem; }
+    nav .searchbar_input .searchbar_text {
+      width: 30rem;
+      height: 2rem;
+      width: 60%;
+      padding: 0 .2rem; }
+    nav .searchbar_input .searchButton {
+      height: 2rem;
+      width: 3rem;
+      cursor: pointer;
+      color: white;
+      background-color: #3b3a3a; }
+  nav .icons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 5rem;
+    margin-right: 1.2rem; }
+    nav .icons .fa-bell {
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      margin-right: 1.2rem; }
+    nav .icons .login_circle {
+      background-color: white;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer; }
+      nav .icons .login_circle .letter {
+        color: #c90c0c;
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: bold; }
+
+main {
+  display: flex;
+  flex-direction: row;
+  width: 100%; }
+  main .aside {
+    flex: 1;
+    display: none; }
+    main .aside .sidebar {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center; }
+      main .aside .sidebar .home,
+      main .aside .sidebar .trending,
+      main .aside .sidebar .subscription,
+      main .aside .sidebar .watch_later,
+      main .aside .sidebar .liked_videos {
+        cursor: pointer;
+        height: 5rem;
+        display: flex;
+        flex-direction: row;
+        padding-left: 2rem; }
+        main .aside .sidebar .home .icon_wrapper,
+        main .aside .sidebar .trending .icon_wrapper,
+        main .aside .sidebar .subscription .icon_wrapper,
+        main .aside .sidebar .watch_later .icon_wrapper,
+        main .aside .sidebar .liked_videos .icon_wrapper {
+          width: 3.8rem;
+          align-self: center; }
+        main .aside .sidebar .home span,
+        main .aside .sidebar .trending span,
+        main .aside .sidebar .subscription span,
+        main .aside .sidebar .watch_later span,
+        main .aside .sidebar .liked_videos span {
+          font-size: 1.2rem;
+          align-self: center; }
+      main .aside .sidebar .home:hover,
+      main .aside .sidebar .trending:hover,
+      main .aside .sidebar .subscription:hover,
+      main .aside .sidebar .watch_later:hover,
+      main .aside .sidebar .liked_videos:hover {
+        background-color: lightgrey; }
+        main .aside .sidebar .home:hover .fa:hover,
+        main .aside .sidebar .trending:hover .fa:hover,
+        main .aside .sidebar .subscription:hover .fa:hover,
+        main .aside .sidebar .watch_later:hover .fa:hover,
+        main .aside .sidebar .liked_videos:hover .fa:hover {
+          color: #c90c0c; }
+      main .aside .sidebar .fa {
+        color: #3b3a3a;
+        font-size: 2.8rem; }
+  main section {
+    flex: 5;
+    background-color: #cccaca; }
+    main section .main_content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly; }
+      main section .main_content .video {
+        margin: 2rem 1.4rem; }
+
+#containerVisible {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  background-size: cover;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  position: fixed; }
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    #containerVisible {
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.3); } }
+  #containerVisible .form-container {
+    width: 40rem;
+    height: 23rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(10, 10, 10, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: auto;
+    text-align: center;
+    z-index: 2; }
+    #containerVisible .form-container h2 {
+      color: white;
+      font-size: 2rem;
+      margin: 0px 0px 1.5rem 0px; }
+    #containerVisible .form-container .form-input {
+      margin-bottom: 1rem;
+      border: none;
+      color: gray; }
+    #containerVisible .form-container .form-input-text {
+      border-radius: 20px;
+      height: 2rem;
+      border: none;
+      width: 15rem;
+      font-weight: bold;
+      padding-left: 8px;
+      color: gray; }
+    #containerVisible .form-container ::-webkit-input-placeholder {
+      color: darkgray; }
+    #containerVisible .form-container .check-div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+      #containerVisible .form-container .check-div .terms {
+        color: white;
+        margin-left: 5px; }
+        #containerVisible .form-container .check-div .terms a {
+          text-decoration: underline;
+          color: lightblue; }
+    #containerVisible .form-container #popup_close:link, #containerVisible .form-container #popup_close:visited {
+      color: red;
+      right: 1rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: flex;
+      flex-direction: row-reverse;
+      line-height: 1;
+      padding-right: 1rem; }
+    #containerVisible .form-container #popup_close:hover {
+      color: white; }
+  #containerVisible #btn, #containerVisible #btn:link, #containerVisible #btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    background-color: red;
+    margin-top: 15px;
+    border-radius: 20px;
+    height: 2.5rem;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    width: 15rem; }
+  #containerVisible #btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    #containerVisible #btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  #containerVisible #btn:active, #containerVisible #btn:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  #containerVisible #emailOutput,
+  #containerVisible #phoneOutput,
+  #containerVisible #nameOutput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    color: white;
+    font-weight: bold; }

@@ -1,0 +1,78 @@
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .aside {
+        flex: 1;
+        display: none;
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .home,
+            .trending,
+            .subscription,
+            .watch_later,
+            .liked_videos {
+                cursor: pointer;
+                height: 5rem;
+                display: flex;
+                flex-direction: row;
+                padding-left: 2rem;
+
+                .icon_wrapper {
+                    width: 3.8rem;
+                    align-self: center;
+                }
+
+                span {
+                    font-size: 1.2rem;
+                    align-self: center;
+                }
+            }
+
+            .home:hover,
+            .trending:hover,
+            .subscription:hover,
+            .watch_later:hover,
+            .liked_videos:hover {
+                background-color: lightgrey;
+
+                .fa:hover {
+                    color: $red;
+                }
+            }
+
+            .fa {
+                color: rgb(59, 58, 58);
+                font-size: 2.8rem;
+
+            }
+
+            align-self: center;
+        }
+    }
+
+    section {
+        flex: 5;
+        background-color: rgb(204, 202, 202);
+
+        .main_content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            
+
+            .video {
+                margin: 2rem 1.4rem;
+            }
+
+        }
+    }
+}
+
+

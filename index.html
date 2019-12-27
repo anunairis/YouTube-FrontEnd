@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YouTube</title>
+    <link rel="stylesheet" href="/style/css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav role="navigation">
+
+        <div class="topnav">
+            <a href="#main_content" class="active"></a>
+
+            <a href="#main_content" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars hamburger"></i>
+            </a>
+        </div>
+
+        <div class="logo">
+            <a href="#main_content">
+                YouTube
+        </div></a>
+
+        <form class="searchbar_input">
+            <input class="searchbar_text" type="text" placeholder="Search">
+            <button class="fa fa-search searchButton" type="submit"></button>
+        </form>
+
+        <div class="icons">
+            <i class="fa fa-bell"></i>
+
+            <div class="login_circle" id="login_circle">
+                <div class="letter">A</div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <aside id="myLinks" class="aside">
+            <div class="sidebar">
+
+                <div class="home">
+                    <div class="icon_wrapper"><i class="fa fa-home"></i></div>
+                    <span>Home</span>
+                </div>
+                <div class="trending">
+                    <div class="icon_wrapper"><i class="fa fa-fire" aria-hidden="true"></i></div>
+                    <span>Trending</span>
+                </div>
+                <div class="subscription">
+                    <div class="icon_wrapper"><i class="fa fa-folder-open" aria-hidden="true"></i></div>
+                    <span>Subscription</span>
+                </div>
+                <div class="watch_later">
+                    <div class="icon_wrapper"><i class="fa fa-clock-o"></i></div>
+                    <span>Watch later</span>
+                </div>
+                <div class="liked_videos">
+                    <div class="icon_wrapper"><i class="fa fa-thumbs-up"></i></div>
+                    <span>Liked videos</span>
+                </div>
+            </div>
+        </aside>
+
+        <section>
+            <div class="main_content" id="main_content">
+
+                <div class="video1 video">
+                    <iframe width="350" height="215" src="https://www.youtube.com/embed/0zXfDafyyao?controls=0"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="video2 video">
+                    <iframe width="350" height="215" src="https://www.youtube.com/embed/tybSvQRNVzQ?controls=0"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="video3 video">
+                    <iframe width="350" height="215" src="https://www.youtube.com/embed/CMla2ZIz7-4?controls=0"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="containerVisible">
+        <form name="myform" action="#" class="form-container" id="form-container" method="get">
+            <a href="#" id="popup_close">&times;</a>
+            <h2>Log in!</h2>
+            <div class="form-input">
+                <input id="name" name="name" placeholder="User name" type="text" class="form-input-text" />
+                <span id="nameOutput"></span>
+            </div>
+            <div class="form-input">
+                <input id="email" name="email" placeholder="Email" type="text" class="form-input-text" />
+                <span id="emailOutput"></span>
+            </div>
+
+            <div class="check-div">
+                <input type="checkbox" class="check" />
+                <span class="terms">
+                    I have read and agree to the <a href="">Terms of Use</a> and
+                    <a href=""> Privacy Policy</a></span>
+                <!-- <input type="button" value="Submit" id="btn"> -->
+            </div>
+            <button type="button" id="btn">Submit</button>
+            <div id="thankYou"></div>
+        </form>
+    </div>
+
+
+
+
+    <script src="js.js"></script>
+</body>
+
+</html>
+
+<!--    Made by Erik Terwan    -->
+<!--   24th of November 2015   -->
+<!--        MIT License        -->
